@@ -1,0 +1,133 @@
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --v-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --v-light-gray: hsl(0, 0%, 98%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+
+    background-color: var(--v-light-gray);
+}
+
+main {
+    margin: 3rem 2rem;
+    max-width: 70em;
+}
+
+h1 {
+    text-align: center;
+    color: var(--grayish-blue);
+}
+
+h2 {
+    text-align: center;
+    color: var(--v-dark-blue);
+    font-size: 2em;
+}
+
+main > p {
+    max-width: 60ch;
+    text-align: center;
+    margin: auto;
+    margin-top: 1.5em;
+    
+    color: var(--grayish-blue);
+}
+
+.cards-container {
+    margin-top: 3em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "s t c"
+    "s k c";
+    gap: 1.6em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(1, 1, 94, 0.144);
+    padding: 2em 1.4em;
+}
+
+.card > h3 {
+    color: var(--v-dark-blue);
+    font-weight: bolder;
+}
+
+.card > p {
+    color: var(--grayish-blue);
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+
+.card > img {
+    align-self: flex-end;
+    margin-top: auto;
+}
+
+.supervisor {
+    grid-area: s;
+    align-self: center;
+    border-top: 4px solid var(--cyan);
+}
+
+.karma {
+    grid-area: k;
+    border-top: 4px solid var(--orange);
+}
+
+.calculator {
+    grid-area: c;
+    align-self: center;
+    border-top: 4px solid var(--blue);
+}
+
+.team {
+    grid-area: t;
+    border-top: 4px solid var(--red);
+}
+
+@media (max-width: 870px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "s t"
+        "k c";
+    }
+
+    .supervisor, .calculator {
+        align-self: stretch;
+    }
+}
+
+
+
+@media (max-width: 500px) {
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .supervisor, .calculator {
+        align-self: stretch;
+    }
+}
+
