@@ -19,6 +19,7 @@ body {
     place-content: center;
 
     background-color: var(--v-light-gray);
+    font-family: Poppins, sans-serif;
 }
 
 main {
@@ -29,12 +30,14 @@ main {
 h1 {
     text-align: center;
     color: var(--grayish-blue);
+    font-weight: 200;
 }
 
 h2 {
     text-align: center;
     color: var(--v-dark-blue);
     font-size: 2em;
+    font-weight: 600;
 }
 
 main > p {
@@ -44,6 +47,7 @@ main > p {
     margin-top: 1.5em;
     
     color: var(--grayish-blue);
+    font-weight: 400;
 }
 
 .cards-container {
@@ -69,7 +73,7 @@ main > p {
 
 .card > h3 {
     color: var(--v-dark-blue);
-    font-weight: bolder;
+    font-weight: 600;
 }
 
 .card > p {
